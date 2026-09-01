@@ -91,6 +91,10 @@ OrthoMark/
 ├── config.py              # All hyperparameters
 ├── train.py               # Training script
 ├── test.py                # Testing script
+├── checkpoints/           # Released pretrained checkpoints
+│   ├── orthomark_robust_64bits.pt
+│   ├── orthomark_robust_256bits.pt
+│   └── orthomark_capacity_32768bits.pt
 │
 ├── models/                # Model definitions
 │   ├── orthomark.py       # Main OrthoMark model (RFE)
@@ -155,6 +159,16 @@ python train.py
 ```bash
 python test.py
 ```
+
+### Pretrained Checkpoints
+
+The repository includes checkpoints for the following settings:
+
+| Checkpoint | Setting |
+|------------|---------|
+| [`orthomark_robust_64bits.pt`](checkpoints/orthomark_robust_64bits.pt) | 64-bit robust QIM under the 15-distortion protocol |
+| [`orthomark_robust_256bits.pt`](checkpoints/orthomark_robust_256bits.pt) | 256-bit robust QIM under the 15-distortion protocol |
+| [`orthomark_capacity_32768bits.pt`](checkpoints/orthomark_capacity_32768bits.pt) | Clean, high-capacity QIM with $2^{15}=32{,}768$ bits |
 
 ## ⚙️ Configuration
 
